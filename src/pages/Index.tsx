@@ -127,6 +127,25 @@ const About = () => (
         Jsme soukromé rehabilitační zařízení zaměřené na komplexní péči o váš pohybový aparát.
       </p>
 
+      <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="rounded-2xl overflow-hidden shadow-lg">
+          <img
+            src="/recepce.jpg"
+            alt="Recepce – objednání pacienta"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="rounded-2xl overflow-hidden shadow-lg">
+          <img
+            src="/cviceni.jpg"
+            alt="Cvičení s fyzioterapeutkou na míči"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
       <div className="grid md:grid-cols-2 gap-12 mb-16">
         <div>
           <h3 className="text-2xl font-semibold mb-4">Náš tým</h3>
