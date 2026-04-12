@@ -317,7 +317,7 @@ const Contact = () => (
   <section id="kontakt" className="py-20 md:py-28">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">Kontakt</h2>
-      <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
         <div className="bg-card border rounded-2xl p-8 text-center">
           <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
             <MapPin className="w-6 h-6 text-primary" />
@@ -350,6 +350,18 @@ const Contact = () => (
             o pohybový aparát
           </p>
         </div>
+      </div>
+      <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden border shadow-sm">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2567.5!2d16.9697!3d49.9653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47134c1b1b1b1b1b%3A0x0!2sM.+R.+%C5%A0tef%C3%A1nika+3%2C+787+01+%C5%A0umperk!5e0!3m2!1scs!2scz!4v1700000000000"
+          width="100%"
+          height="350"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Mapa – Fyzioterapie Šumperk"
+        />
       </div>
     </div>
   </section>
