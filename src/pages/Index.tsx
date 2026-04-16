@@ -50,7 +50,8 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur border-b">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#uvod" className="font-serif text-xl font-bold text-foreground" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+        <a href="#uvod" className="flex items-center gap-2 font-serif text-xl font-bold text-foreground" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
           Fyzioterapie Šumperk
         </a>
         <nav className="hidden md:flex gap-6">
@@ -221,7 +222,7 @@ const TeamProfile = () => (
       <div className="grid md:grid-cols-2 gap-12 items-start">
         <div className="flex justify-center">
           <img
-            src="/hulkova.png"
+            src="/hero.jpg"
             alt="Mgr. Hana Hůlková"
             className="rounded-2xl shadow-lg max-w-sm w-full object-cover"
           />
