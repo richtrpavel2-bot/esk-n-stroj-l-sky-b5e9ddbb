@@ -523,6 +523,7 @@ const Index = () => (
     <Hero />
     <About />
     <TeamProfile />
+    <ColleagueProfiles />
     <Services />
     <FAQ />
     <Contact />
