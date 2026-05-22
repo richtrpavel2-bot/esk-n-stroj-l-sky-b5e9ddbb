@@ -44,6 +44,41 @@ const COURSES = [
   "Základy vestibulární rehabilitace",
 ];
 
+const PLICKOVA_COURSES = [
+  "Měkké a mobilizační techniky",
+  "Metodika dle Ludmily Mojžíšové",
+  "DNS – dynamická neuromuskulární stabilizace dle Pavla Koláře",
+  "McKenzie – části A, B, C, D, E",
+  "KT – kraniosakrální terapie 1, 2",
+  "Viscerální manipulace",
+  "SM systém – cvičení s pružnými lany dle Smíška",
+  "Kurz kineziotejpingu",
+  "Cvičení na velkých míčích",
+  "Rehabilitace v těhotenství",
+  "Kurz vestibulární rehabilitace",
+  "Certifikovaný lektor jógy",
+  "Certifikovaný lektor čchi-kungu",
+];
+
+const MORAVKOVA_COURSES = [
+  "SM systém – kurz 2A, 2B",
+  "Terapeutické využití kineziologických tejpů",
+  "Škola pánevního dna – metoda 3×3",
+  "Rehabilitační léčba některých druhů ženské sterility metodou L. Mojžíšové",
+  "Diagnostika a terapie funkčních poruch (manuální medicína) pro fyzioterapeuty",
+  "Manuální lymfodrenáž pro fyzioterapeuty",
+  "DNS – Dynamická neuromuskulární stabilizace dle prof. Koláře (A, B, C)",
+  "DMR – Dynamika myofasciálních řetězců v diagnostice a terapii",
+  "Mobilizace v kontextu svalových řetězců",
+  "Komplexní terapie pletence ramenního",
+  "Jógové pozice u skolióz a VDT",
+  "Využití jógy ve fyzioterapii",
+  "Myofasciální trigger pointy",
+  "Tradiční čínská medicína a fytoterapie",
+  "Baňkování a moxování",
+  "Reflexní terapie",
+];
+
 const Header = () => {
   const [open, setOpen] = useState(false);
 
