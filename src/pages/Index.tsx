@@ -44,6 +44,41 @@ const COURSES = [
   "Základy vestibulární rehabilitace",
 ];
 
+const PLICKOVA_COURSES = [
+  "Měkké a mobilizační techniky",
+  "Metodika dle Ludmily Mojžíšové",
+  "DNS – dynamická neuromuskulární stabilizace dle Pavla Koláře",
+  "McKenzie – části A, B, C, D, E",
+  "KT – kraniosakrální terapie 1, 2",
+  "Viscerální manipulace",
+  "SM systém – cvičení s pružnými lany dle Smíška",
+  "Kurz kineziotejpingu",
+  "Cvičení na velkých míčích",
+  "Rehabilitace v těhotenství",
+  "Kurz vestibulární rehabilitace",
+  "Certifikovaný lektor jógy",
+  "Certifikovaný lektor čchi-kungu",
+];
+
+const MORAVKOVA_COURSES = [
+  "SM systém – kurz 2A, 2B",
+  "Terapeutické využití kineziologických tejpů",
+  "Škola pánevního dna – metoda 3×3",
+  "Rehabilitační léčba některých druhů ženské sterility metodou L. Mojžíšové",
+  "Diagnostika a terapie funkčních poruch (manuální medicína) pro fyzioterapeuty",
+  "Manuální lymfodrenáž pro fyzioterapeuty",
+  "DNS – Dynamická neuromuskulární stabilizace dle prof. Koláře (A, B, C)",
+  "DMR – Dynamika myofasciálních řetězců v diagnostice a terapii",
+  "Mobilizace v kontextu svalových řetězců",
+  "Komplexní terapie pletence ramenního",
+  "Jógové pozice u skolióz a VDT",
+  "Využití jógy ve fyzioterapii",
+  "Myofasciální trigger pointy",
+  "Tradiční čínská medicína a fytoterapie",
+  "Baňkování a moxování",
+  "Reflexní terapie",
+];
+
 const Header = () => {
   const [open, setOpen] = useState(false);
 
@@ -211,6 +246,91 @@ const About = () => (
             </span>
           ))}
         </div>
+      </div>
+    </div>
+  </section>
+);
+
+const ColleagueProfiles = () => (
+  <section className="py-20 md:py-28">
+    <div className="container mx-auto px-4 max-w-5xl">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Naše spolupracovnice</h2>
+      <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+        Tým doplňují další zkušené fyzioterapeutky s vlastní odbornou specializací.
+      </p>
+
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Pličková */}
+        <article className="bg-card border rounded-2xl p-8 shadow-sm">
+          <h3 className="text-2xl font-bold mb-1">Lenka Pličková</h3>
+          <p className="text-primary font-medium mb-6">Atestovaná fyzioterapeutka, vedoucí fyzioterapeutka</p>
+
+          <h4 className="text-base font-semibold mb-2">Vzdělání</h4>
+          <ul className="space-y-2 text-muted-foreground mb-5 text-sm">
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+              4letý maturitní obor rehabilitační pracovník
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+              Dvouleté atestační studium v oboru fyzioterapie
+            </li>
+          </ul>
+
+          <h4 className="text-base font-semibold mb-2">Praxe</h4>
+          <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
+            Lázně Velké Losiny – respirační fyzioterapie dětí; soukromá ambulance fyzioterapie Šumperk.
+            Více než 20 let praxe ve vedených lekcích jógy a SM systému.
+          </p>
+
+          <h4 className="text-base font-semibold mb-2">Kurzy</h4>
+          <ul className="space-y-1.5 text-muted-foreground text-sm">
+            {PLICKOVA_COURSES.map((c) => (
+              <li key={c} className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                {c}
+              </li>
+            ))}
+          </ul>
+        </article>
+
+        {/* Morávková */}
+        <article className="bg-card border rounded-2xl p-8 shadow-sm">
+          <h3 className="text-2xl font-bold mb-1">Mgr. Michaela Morávková</h3>
+          <p className="text-primary font-medium mb-6">Fyzioterapeutka</p>
+
+          <h4 className="text-base font-semibold mb-2">Vzdělání</h4>
+          <ul className="space-y-2 text-muted-foreground mb-5 text-sm">
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+              Univerzita Palackého v Olomouci, Fakulta zdravotnických věd – Fyzioterapie (Bc.)
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+              Trenčianska univerzita A. Dubčeka, Fakulta zdravotníctva – Fyzioterapie (Mgr.)
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+              Tradiční čínská medicína v Brně
+            </li>
+          </ul>
+
+          <h4 className="text-base font-semibold mb-2">Praxe</h4>
+          <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
+            Remedic rehabilitace s.r.o., Lázně Velké Losiny s.r.o., Ungerová – rehabilitace s.r.o.,
+            Fyzioterapie Šumperk s.r.o.
+          </p>
+
+          <h4 className="text-base font-semibold mb-2">Odborné kurzy</h4>
+          <ul className="space-y-1.5 text-muted-foreground text-sm">
+            {MORAVKOVA_COURSES.map((c) => (
+              <li key={c} className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                {c}
+              </li>
+            ))}
+          </ul>
+        </article>
       </div>
     </div>
   </section>
@@ -403,6 +523,7 @@ const Index = () => (
     <Hero />
     <About />
     <TeamProfile />
+    <ColleagueProfiles />
     <Services />
     <FAQ />
     <Contact />
