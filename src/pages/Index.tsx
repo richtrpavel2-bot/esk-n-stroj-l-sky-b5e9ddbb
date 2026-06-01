@@ -274,7 +274,7 @@ const ColleagueProfiles = () => (
         Tým doplňují další zkušené fyzioterapeutky s vlastní odbornou specializací.
       </p>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Pličková */}
         <article className="bg-card border rounded-2xl p-8 shadow-sm">
           <h3 className="text-2xl font-bold mb-1">Lenka Pličková</h3>
