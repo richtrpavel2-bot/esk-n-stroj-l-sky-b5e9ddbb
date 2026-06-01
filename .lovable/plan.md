@@ -1,15 +1,26 @@
-1. Upravit `index.html`:
-   - Změnit `<title>` z "Lovable App" na "Fyzioterapie Šumperk"
-   - Odstranit nebo změnit `meta name="author" content="Lovable"`
-   - Odstranit nebo změnit `meta name="description" content="Lovable Generated Project"`
-   - Aktualizovat `og:title`, `og:description`, `og:image`
-   - Odstranit `twitter:site` a `twitter:image`
+## Plán: Přidání profilu Mgr. Simony Krylové
 
-2. Upravit `vite.config.ts`:
-   - Odstranit import a použití pluginu `componentTagger` z `lovable-tagger`
+### Cíl
+Doplnit třetí spolupracovnici (Mgr. Simona Krylová) do stávající sekce "Naše spolupracovnice" na webu.
 
-3. Upravit `package.json`:
-   - Odstranit závislost `lovable-tagger` z `devDependencies`
+### Změny
 
-4. Upravit `package-lock.json`:
-   - Odstranit záznamy související s `lovable-tagger`
+1. **Nová konstanta s kurzy**
+   Vytvořit `KRYLOVA_COURSES` v `src/pages/Index.tsx` s 12 kurzy dle dodaného seznamu.
+
+2. **Upravit layout**
+   Změnit grid v `ColleagueProfiles` z `md:grid-cols-2` na `md:grid-cols-3`, aby se tři profily vešly vedle sebe.
+
+3. **Přidat kartu**
+   Vložit nový `<article>` pro Simonu Krylovou mezi Morávkovou a Pličkovou (nebo na konec) s následujícím obsahem:
+   - Jméno: Mgr. Simona Krylová
+   - Povolání: Fyzioterapeutka
+   - Vzdělání: 3 položky (SZŠ Ostrava, OU Ostrava, MU Brno)
+   - Praxe: Lázně Velké Losiny, Fyzioterapie Šumperk s.r.o.
+   - Odborné kurzy: 12 položek ze seznamu
+
+4. **Responsivita**
+   Ověřit, že na mobilu se karty zobrazují pod sebou a na tabletu/desktopu vedle sebe.
+
+### Soubory
+- `src/pages/Index.tsx` – jediný upravovaný soubor
