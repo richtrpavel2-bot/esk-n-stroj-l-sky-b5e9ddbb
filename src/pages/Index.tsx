@@ -346,6 +346,43 @@ const ColleagueProfiles = () => (
             ))}
           </ul>
         </article>
+
+        {/* Krylová */}
+        <article className="bg-card border rounded-2xl p-8 shadow-sm">
+          <h3 className="text-2xl font-bold mb-1">Mgr. Simona Krylová</h3>
+          <p className="text-primary font-medium mb-6">Fyzioterapeutka</p>
+
+          <h4 className="text-base font-semibold mb-2">Vzdělání</h4>
+          <ul className="space-y-2 text-muted-foreground mb-5 text-sm">
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+              SZŠ a VZŠ Ostrava – Diplomovaný fyzioterapeut (2020)
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+              Ostravská univerzita, Zdravotně sociální fakulta – Léčebná rehabilitace a fyzioterapie (2003)
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+              Masarykova univerzita Brno, Lékařská fakulta – Léčebná rehabilitace a fyzioterapie (2005)
+            </li>
+          </ul>
+
+          <h4 className="text-base font-semibold mb-2">Praxe</h4>
+          <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
+            Lázně Velké Losiny, Fyzioterapie Šumperk s.r.o.
+          </p>
+
+          <h4 className="text-base font-semibold mb-2">Odborné kurzy</h4>
+          <ul className="space-y-1.5 text-muted-foreground text-sm">
+            {KRYLOVA_COURSES.map((c) => (
+              <li key={c} className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                {c}
+              </li>
+            ))}
+          </ul>
+        </article>
       </div>
     </div>
   </section>
