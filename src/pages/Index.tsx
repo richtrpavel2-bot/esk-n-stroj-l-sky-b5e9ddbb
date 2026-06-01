@@ -79,6 +79,21 @@ const MORAVKOVA_COURSES = [
   "Reflexní terapie",
 ];
 
+const KRYLOVA_COURSES = [
+  "McKenzie metoda – mechanická diagnostika a terapie, část A–E",
+  "Aplikace metody Roswithy Brunkow",
+  "Rehabilitační léčba některých druhů funkční ženské sterility metodou L. Mojžíšové",
+  "Komplexní terapie pletence ramenního",
+  "Stabilita v pohybovém systému a hluboký stabilizační systém",
+  "Dornova metoda a Breussova masáž",
+  "Kurz cvičení SM systém – úvodní + pro pokročilé",
+  "Terapeutické využití kinesiotapu",
+  "Komplexní přístup k diagnostice a terapii nosných kloubů",
+  "Trénink neuromuskulární propriocepce",
+  "Terapie skolióz podle Schrothové",
+  "Kurz akvaaerobiku",
+];
+
 const Header = () => {
   const [open, setOpen] = useState(false);
 
