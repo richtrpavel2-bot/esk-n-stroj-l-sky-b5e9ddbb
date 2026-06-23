@@ -1,31 +1,22 @@
 ## Co udělám
 
-### 1. README.md – pryč s Lovable
-Přepíšu na:
-```
-# Fyzioterapie Šumperk s.r.o. – web
+Zakomponuju 6 fotek paní Pličkové do její karty v sekci „Naše spolupracovnice" na hlavní stránce.
 
-Jednostránková prezentace soukromého rehabilitačního zařízení v Šumperku.
-Postaveno na Vite + React + Tailwind.
-```
+### 1. Banner nahoře v kartě
+- **image5.jpeg** (kineziotaping na rameni) jako široký banner v horní části karty, aspect 4:3, zaoblené horní rohy.
 
-### 2. Fotky Pličkové do karty „Naše spolupracovnice"
-**Fotky zatím v chatu nejsou** – v příloze vidím jen starší soubory (Cvičení.jpg, Recepce.jpg, hulkovi_3.png, logo.png, Řeči_Pličkové.docx), žádný nový portrét. Bez originálů nemůžu nic vložit.
+### 2. Mini-galerie „Z mé praxe" uvnitř karty
+- Pod text profilu přidám sekci se zbývajícími 5 fotkami v gridu (3+2 na desktopu, 2 sloupce na mobilu).
+- Klik na fotku otevře lightbox (shadcn `Dialog`).
+- Lazy loading, popisky `alt`:
+  - 4× „Práce s dětským pacientem na proprioceptivních podložkách"
+  - 1× „Elektroléčba krční páteře"
 
-Jakmile fotky pošleš (stačí přetáhnout do chatu), provedu toto:
+### 3. Layout 3 karet zůstává
+Karta Pličkové bude vyšší než Morávková a Krylová – grid si s tím poradí, karty se zarovnají nahoře.
 
-- **1 fotka (portrét)** – nahoru do karty Pličkové, kruhový ořez ~160 px, nad jméno. Stejný styl pak doplním i k Morávkové a Krylové, aby karty zůstaly vizuálně konzistentní (u nich použiji iniciály nebo necháš dodat).
-- **2–3 fotky** – portrét nahoru + zbytek pod profil jako malou galerii (grid 2 sloupce, zaoblené rohy, lazy loading).
-- **Více fotek** – portrét + carousel/lightbox pod profilem.
+### 4. Technické detaily
+- Fotky nahraju přes `lovable-assets` CLI na CDN (nezvětší repo), pointery uložím do `src/assets/plickova/`.
+- Mění se jen třetí `<article>` v komponentě `ColleagueProfiles` v `src/pages/Index.tsx`.
 
-Fotky nahraju přes `lovable-assets` CLI (CDN), abych nezvětšoval repo, a v `src/pages/Index.tsx` upravím třetí `<article>` v `ColleagueProfiles`.
-
-### 3. Co potřebuji od tebe
-- **Přilož fotky do dalšího chatu.** Napiš krátce, která je portrét a co je na ostatních (cvičení, ordinace, …), ať volím správné popisky `alt=""`.
-
----
-
-### Technické detaily
-- Soubor: `src/pages/Index.tsx`, sekce `ColleagueProfiles` (~ř. 380–500).
-- README: `README.md`.
-- Layout karet zůstává `md:grid-cols-2 lg:grid-cols-3`.
+Pokud později pošleš klasický portrét (hlava + ramena), snadno ho doplním nad jméno.

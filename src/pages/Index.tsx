@@ -7,6 +7,23 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
+
+import plickovaBanner from "@/assets/plickova/image5.jpeg.asset.json";
+import plickova1 from "@/assets/plickova/IMG_4736.jpeg.asset.json";
+import plickova2 from "@/assets/plickova/IMG_4743.jpeg.asset.json";
+import plickova3 from "@/assets/plickova/IMG_4766.jpeg.asset.json";
+import plickova4 from "@/assets/plickova/IMG_4777.jpeg.asset.json";
+import plickova5 from "@/assets/plickova/IMG_4809.jpeg.asset.json";
+
+const PLICKOVA_GALLERY = [
+  { src: plickova1.url, alt: "Práce s dětským pacientem na proprioceptivních podložkách" },
+  { src: plickova2.url, alt: "Práce s dětským pacientem na proprioceptivních podložkách" },
+  { src: plickova3.url, alt: "Práce s dětským pacientem na proprioceptivních podložkách" },
+  { src: plickova4.url, alt: "Práce s dětským pacientem na proprioceptivních podložkách" },
+  { src: plickova5.url, alt: "Elektroléčba krční páteře" },
+];
+
 
 const NAV_ITEMS = [
   { label: "Úvod", href: "#uvod" },
@@ -276,38 +293,72 @@ const ColleagueProfiles = () => (
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Pličková */}
-        <article className="bg-card border rounded-2xl p-8 shadow-sm">
-          <h3 className="text-2xl font-bold mb-1">Lenka Pličková</h3>
-          <p className="text-primary font-medium mb-6">Atestovaná fyzioterapeutka, vedoucí fyzioterapeutka</p>
+        <article className="bg-card border rounded-2xl shadow-sm overflow-hidden">
+          <img
+            src={plickovaBanner.url}
+            alt="Lenka Pličková aplikuje kineziotape na rameno pacientky"
+            loading="lazy"
+            className="w-full aspect-[4/3] object-cover"
+          />
+          <div className="p-8">
+            <h3 className="text-2xl font-bold mb-1">Lenka Pličková</h3>
+            <p className="text-primary font-medium mb-6">Atestovaná fyzioterapeutka, vedoucí fyzioterapeutka</p>
 
-          <h4 className="text-base font-semibold mb-2">Vzdělání</h4>
-          <ul className="space-y-2 text-muted-foreground mb-5 text-sm">
-            <li className="flex items-start gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-              4letý maturitní obor rehabilitační pracovník
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-              Dvouleté atestační studium v oboru fyzioterapie
-            </li>
-          </ul>
-
-          <h4 className="text-base font-semibold mb-2">Praxe</h4>
-          <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
-            Lázně Velké Losiny – respirační fyzioterapie dětí; soukromá ambulance fyzioterapie Šumperk.
-            Více než 20 let praxe ve vedených lekcích jógy a SM systému.
-          </p>
-
-          <h4 className="text-base font-semibold mb-2">Kurzy</h4>
-          <ul className="space-y-1.5 text-muted-foreground text-sm">
-            {PLICKOVA_COURSES.map((c) => (
-              <li key={c} className="flex items-start gap-2">
+            <h4 className="text-base font-semibold mb-2">Vzdělání</h4>
+            <ul className="space-y-2 text-muted-foreground mb-5 text-sm">
+              <li className="flex items-start gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                {c}
+                4letý maturitní obor rehabilitační pracovník
               </li>
-            ))}
-          </ul>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                Dvouleté atestační studium v oboru fyzioterapie
+              </li>
+            </ul>
+
+            <h4 className="text-base font-semibold mb-2">Praxe</h4>
+            <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
+              Lázně Velké Losiny – respirační fyzioterapie dětí; soukromá ambulance fyzioterapie Šumperk.
+              Více než 20 let praxe ve vedených lekcích jógy a SM systému.
+            </p>
+
+            <h4 className="text-base font-semibold mb-2">Kurzy</h4>
+            <ul className="space-y-1.5 text-muted-foreground text-sm mb-6">
+              {PLICKOVA_COURSES.map((c) => (
+                <li key={c} className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                  {c}
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="text-base font-semibold mb-3">Z mé praxe</h4>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+              {PLICKOVA_GALLERY.map((img, i) => (
+                <Dialog key={i}>
+                  <DialogTrigger asChild>
+                    <button
+                      type="button"
+                      className="block overflow-hidden rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    >
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        className="w-full aspect-square object-cover transition-transform hover:scale-105"
+                      />
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl p-0 bg-transparent border-0 shadow-none">
+                    <DialogTitle className="sr-only">{img.alt}</DialogTitle>
+                    <img src={img.src} alt={img.alt} className="w-full h-auto rounded-lg" />
+                  </DialogContent>
+                </Dialog>
+              ))}
+            </div>
+          </div>
         </article>
+
 
         {/* Morávková */}
         <article className="bg-card border rounded-2xl p-8 shadow-sm">
