@@ -1,3 +1,4 @@
-# Welcome to your Lovable project
+# Fyzioterapie Šumperk s.r.o. – web
 
-TODO: Document your project here
+Jednostránková prezentace soukromého rehabilitačního zařízení v Šumperku.
+Postaveno na Vite + React + Tailwind.

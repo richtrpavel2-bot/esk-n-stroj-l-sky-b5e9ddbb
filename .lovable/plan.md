@@ -1,26 +1,31 @@
-## Plán: Přidání profilu Mgr. Simony Krylové
+## Co udělám
 
-### Cíl
-Doplnit třetí spolupracovnici (Mgr. Simona Krylová) do stávající sekce "Naše spolupracovnice" na webu.
+### 1. README.md – pryč s Lovable
+Přepíšu na:
+```
+# Fyzioterapie Šumperk s.r.o. – web
 
-### Změny
+Jednostránková prezentace soukromého rehabilitačního zařízení v Šumperku.
+Postaveno na Vite + React + Tailwind.
+```
 
-1. **Nová konstanta s kurzy**
-   Vytvořit `KRYLOVA_COURSES` v `src/pages/Index.tsx` s 12 kurzy dle dodaného seznamu.
+### 2. Fotky Pličkové do karty „Naše spolupracovnice"
+**Fotky zatím v chatu nejsou** – v příloze vidím jen starší soubory (Cvičení.jpg, Recepce.jpg, hulkovi_3.png, logo.png, Řeči_Pličkové.docx), žádný nový portrét. Bez originálů nemůžu nic vložit.
 
-2. **Upravit layout**
-   Změnit grid v `ColleagueProfiles` z `md:grid-cols-2` na `md:grid-cols-3`, aby se tři profily vešly vedle sebe.
+Jakmile fotky pošleš (stačí přetáhnout do chatu), provedu toto:
 
-3. **Přidat kartu**
-   Vložit nový `<article>` pro Simonu Krylovou mezi Morávkovou a Pličkovou (nebo na konec) s následujícím obsahem:
-   - Jméno: Mgr. Simona Krylová
-   - Povolání: Fyzioterapeutka
-   - Vzdělání: 3 položky (SZŠ Ostrava, OU Ostrava, MU Brno)
-   - Praxe: Lázně Velké Losiny, Fyzioterapie Šumperk s.r.o.
-   - Odborné kurzy: 12 položek ze seznamu
+- **1 fotka (portrét)** – nahoru do karty Pličkové, kruhový ořez ~160 px, nad jméno. Stejný styl pak doplním i k Morávkové a Krylové, aby karty zůstaly vizuálně konzistentní (u nich použiji iniciály nebo necháš dodat).
+- **2–3 fotky** – portrét nahoru + zbytek pod profil jako malou galerii (grid 2 sloupce, zaoblené rohy, lazy loading).
+- **Více fotek** – portrét + carousel/lightbox pod profilem.
 
-4. **Responsivita**
-   Ověřit, že na mobilu se karty zobrazují pod sebou a na tabletu/desktopu vedle sebe.
+Fotky nahraju přes `lovable-assets` CLI (CDN), abych nezvětšoval repo, a v `src/pages/Index.tsx` upravím třetí `<article>` v `ColleagueProfiles`.
 
-### Soubory
-- `src/pages/Index.tsx` – jediný upravovaný soubor
+### 3. Co potřebuji od tebe
+- **Přilož fotky do dalšího chatu.** Napiš krátce, která je portrét a co je na ostatních (cvičení, ordinace, …), ať volím správné popisky `alt=""`.
+
+---
+
+### Technické detaily
+- Soubor: `src/pages/Index.tsx`, sekce `ColleagueProfiles` (~ř. 380–500).
+- README: `README.md`.
+- Layout karet zůstává `md:grid-cols-2 lg:grid-cols-3`.
