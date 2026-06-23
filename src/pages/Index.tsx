@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+
 import plickovaBanner from "@/assets/plickova/image5.jpeg.asset.json";
 import plickova1 from "@/assets/plickova/IMG_4736.jpeg.asset.json";
 import plickova2 from "@/assets/plickova/IMG_4743.jpeg.asset.json";
