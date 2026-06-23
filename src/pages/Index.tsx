@@ -7,6 +7,23 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import plickovaBanner from "@/assets/plickova/image5.jpeg.asset.json";
+import plickova1 from "@/assets/plickova/IMG_4736.jpeg.asset.json";
+import plickova2 from "@/assets/plickova/IMG_4743.jpeg.asset.json";
+import plickova3 from "@/assets/plickova/IMG_4766.jpeg.asset.json";
+import plickova4 from "@/assets/plickova/IMG_4777.jpeg.asset.json";
+import plickova5 from "@/assets/plickova/IMG_4809.jpeg.asset.json";
+
+const PLICKOVA_GALLERY = [
+  { src: plickova1.url, alt: "Práce s dětským pacientem na proprioceptivních podložkách" },
+  { src: plickova2.url, alt: "Práce s dětským pacientem na proprioceptivních podložkách" },
+  { src: plickova3.url, alt: "Práce s dětským pacientem na proprioceptivních podložkách" },
+  { src: plickova4.url, alt: "Práce s dětským pacientem na proprioceptivních podložkách" },
+  { src: plickova5.url, alt: "Elektroléčba krční páteře" },
+];
+
 
 const NAV_ITEMS = [
   { label: "Úvod", href: "#uvod" },
