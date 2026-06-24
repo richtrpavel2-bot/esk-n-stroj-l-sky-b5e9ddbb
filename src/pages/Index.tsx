@@ -9,19 +9,17 @@ import {
 } from "@/components/ui/accordion";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
 
-import plickovaBanner from "@/assets/plickova/image5.jpeg.asset.json";
-import plickova1 from "@/assets/plickova/IMG_4736.jpeg.asset.json";
-import plickova2 from "@/assets/plickova/IMG_4743.jpeg.asset.json";
-import plickova3 from "@/assets/plickova/IMG_4766.jpeg.asset.json";
-import plickova4 from "@/assets/plickova/IMG_4777.jpeg.asset.json";
-import plickova5 from "@/assets/plickova/IMG_4809.jpeg.asset.json";
+import plickovaBanner from "@/assets/plickova/S_klukem_cvicime_1.jpeg.asset.json";
+import plickova2 from "@/assets/plickova/S_klukem_cvicime_2.jpeg.asset.json";
+import plickova3 from "@/assets/plickova/S_klukem_cvicime_3.jpeg.asset.json";
+import plickova4 from "@/assets/plickova/Se_zenou_na_luzku.jpeg.asset.json";
+import plickova5 from "@/assets/plickova/Se_zenou_na_luzku_2.jpeg.asset.json";
 
 const PLICKOVA_GALLERY = [
-  { src: plickova1.url, alt: "Práce s dětským pacientem na proprioceptivních podložkách" },
-  { src: plickova2.url, alt: "Práce s dětským pacientem na proprioceptivních podložkách" },
-  { src: plickova3.url, alt: "Práce s dětským pacientem na proprioceptivních podložkách" },
-  { src: plickova4.url, alt: "Práce s dětským pacientem na proprioceptivních podložkách" },
-  { src: plickova5.url, alt: "Elektroléčba krční páteře" },
+  { src: plickova2.url, alt: "Cvičení s dětským pacientem na proprioceptivních podložkách" },
+  { src: plickova3.url, alt: "Cvičení s dětským pacientem na proprioceptivních podložkách" },
+  { src: plickova4.url, alt: "Terapie přístrojem na rameno" },
+  { src: plickova5.url, alt: "Kineziotaping ramene" },
 ];
 
 
@@ -296,7 +294,7 @@ const ColleagueProfiles = () => (
         <article className="bg-card border rounded-2xl shadow-sm overflow-hidden">
           <img
             src={plickovaBanner.url}
-            alt="Lenka Pličková aplikuje kineziotape na rameno pacientky"
+            alt="Lenka Pličková při cvičení s dětským pacientem"
             loading="lazy"
             className="w-full aspect-[4/3] object-cover"
           />
@@ -333,7 +331,7 @@ const ColleagueProfiles = () => (
             </ul>
 
             <h4 className="text-base font-semibold mb-3">Z mé praxe</h4>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 gap-2">
               {PLICKOVA_GALLERY.map((img, i) => (
                 <Dialog key={i}>
                   <DialogTrigger asChild>
