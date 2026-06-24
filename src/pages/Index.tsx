@@ -295,8 +295,8 @@ const ColleagueProfiles = () => (
         {/* Pličková */}
         <article className="bg-card border rounded-2xl shadow-sm overflow-hidden">
           <img
-            src={plickovaBanner.url}
-            alt="Lenka Pličková při cvičení s dětským pacientem"
+            src={plickovaBanner}
+            alt="Lenka Pličková při terapii pacientky na lůžku"
             loading="lazy"
             className="w-full aspect-[4/3] object-cover"
           />
