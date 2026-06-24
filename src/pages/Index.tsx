@@ -12,14 +12,16 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/
 import plickovaBanner from "@/assets/plickova/S_klukem_cvicime_1.jpeg.asset.json";
 import plickova2 from "@/assets/plickova/S_klukem_cvicime_2.jpeg.asset.json";
 import plickova3 from "@/assets/plickova/S_klukem_cvicime_3.jpeg.asset.json";
-import plickova4 from "@/assets/plickova/Se_zenou_na_luzku.jpeg.asset.json";
-import plickova5 from "@/assets/plickova/Se_zenou_na_luzku_2.jpeg.asset.json";
+import plickova4 from "@/assets/plickova/S_klukem_cvicime_4.jpeg.asset.json";
+import plickova5 from "@/assets/plickova/Se_zenou_na_luzku.jpeg.asset.json";
+import plickova6 from "@/assets/plickova/Se_zenou_na_luzku_2.jpeg.asset.json";
 
 const PLICKOVA_GALLERY = [
   { src: plickova2.url, alt: "Cvičení s dětským pacientem na proprioceptivních podložkách" },
   { src: plickova3.url, alt: "Cvičení s dětským pacientem na proprioceptivních podložkách" },
-  { src: plickova4.url, alt: "Terapie přístrojem na rameno" },
-  { src: plickova5.url, alt: "Kineziotaping ramene" },
+  { src: plickova4.url, alt: "Nácvik stoje a držení těla u dětského pacienta" },
+  { src: plickova5.url, alt: "Terapie přístrojem na rameno" },
+  { src: plickova6.url, alt: "Kineziotaping ramene" },
 ];
 
 
@@ -331,7 +333,7 @@ const ColleagueProfiles = () => (
             </ul>
 
             <h4 className="text-base font-semibold mb-3">Z mé praxe</h4>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {PLICKOVA_GALLERY.map((img, i) => (
                 <Dialog key={i}>
                   <DialogTrigger asChild>
