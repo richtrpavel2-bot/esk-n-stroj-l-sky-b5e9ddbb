@@ -9,19 +9,19 @@ import {
 } from "@/components/ui/accordion";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
 
-import plickovaBanner from "@/assets/plickova/S_klukem_cvicime_1.jpeg.asset.json";
-import plickova2 from "@/assets/plickova/S_klukem_cvicime_2.jpeg.asset.json";
-import plickova3 from "@/assets/plickova/S_klukem_cvicime_3.jpeg.asset.json";
-import plickova4 from "@/assets/plickova/S_klukem_cvicime_4.jpeg.asset.json";
-import plickova5 from "@/assets/plickova/Se_zenou_na_luzku.jpeg.asset.json";
-import plickova6 from "@/assets/plickova/Se_zenou_na_luzku_2.jpeg.asset.json";
+import plickova1 from "@/assets/plickova/S_klukem_cvicime_1.jpeg";
+import plickova2 from "@/assets/plickova/S_klukem_cvicime_2.jpeg";
+import plickova3 from "@/assets/plickova/S_klukem_cvicime_3.jpeg";
+import plickova4 from "@/assets/plickova/S_klukem_cvicime_4.jpeg";
+import plickova5 from "@/assets/plickova/Se_zenou_na_luzku.jpeg";
+import plickovaBanner from "@/assets/plickova/Se_zenou_na_luzku_2.jpeg";
 
 const PLICKOVA_GALLERY = [
-  { src: plickova2.url, alt: "Cvičení s dětským pacientem na proprioceptivních podložkách" },
-  { src: plickova3.url, alt: "Cvičení s dětským pacientem na proprioceptivních podložkách" },
-  { src: plickova4.url, alt: "Nácvik stoje a držení těla u dětského pacienta" },
-  { src: plickova5.url, alt: "Terapie přístrojem na rameno" },
-  { src: plickova6.url, alt: "Kineziotaping ramene" },
+  { src: plickova1, alt: "Cvičení s dětským pacientem na puzzle podložce" },
+  { src: plickova2, alt: "Cvičení s dětským pacientem na proprioceptivních podložkách" },
+  { src: plickova3, alt: "Cvičení s dětským pacientem na proprioceptivních podložkách" },
+  { src: plickova4, alt: "Nácvik stoje a držení těla u dětského pacienta" },
+  { src: plickova5, alt: "Terapie přístrojem na rameno" },
 ];
 
 
@@ -295,8 +295,8 @@ const ColleagueProfiles = () => (
         {/* Pličková */}
         <article className="bg-card border rounded-2xl shadow-sm overflow-hidden">
           <img
-            src={plickovaBanner.url}
-            alt="Lenka Pličková při cvičení s dětským pacientem"
+            src={plickovaBanner}
+            alt="Lenka Pličková při terapii pacientky na lůžku"
             loading="lazy"
             className="w-full aspect-[4/3] object-cover"
           />
