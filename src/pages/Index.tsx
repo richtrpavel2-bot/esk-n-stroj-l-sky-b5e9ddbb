@@ -15,6 +15,16 @@ import plickova3 from "@/assets/plickova/S_klukem_cvicime_3.jpeg";
 import plickova4 from "@/assets/plickova/S_klukem_cvicime_4.jpeg";
 import plickova5 from "@/assets/plickova/Se_zenou_na_luzku.jpeg";
 import plickovaBanner from "@/assets/plickova/Se_zenou_na_luzku_2.jpeg";
+import krylovaBanner from "@/assets/krylova/Se_sedicim_muzem.jpeg";
+import krylova1 from "@/assets/krylova/S_lezicim_muzem.jpeg";
+import krylova2 from "@/assets/krylova/S_muzem_pred_zrcadlem.jpeg";
+import krylova3 from "@/assets/krylova/Se_stojicim_muzem.jpeg";
+
+const KRYLOVA_GALLERY = [
+  { src: krylova1, alt: "Terapie zad rázovou vlnou" },
+  { src: krylova2, alt: "Cvičení stability na gymnastickém míči před zrcadlem" },
+  { src: krylova3, alt: "Nácvik stoje a držení těla s therabandem" },
+];
 
 const PLICKOVA_GALLERY = [
   { src: plickova1, alt: "Cvičení s dětským pacientem na puzzle podložce" },
@@ -399,40 +409,73 @@ const ColleagueProfiles = () => (
         </article>
 
         {/* Krylová */}
-        <article className="bg-card border rounded-2xl p-8 shadow-sm">
-          <h3 className="text-2xl font-bold mb-1">Mgr. Simona Krylová</h3>
-          <p className="text-primary font-medium mb-6">Fyzioterapeutka</p>
+        <article className="bg-card border rounded-2xl shadow-sm overflow-hidden">
+          <img
+            src={krylovaBanner}
+            alt="Simona Krylová při terapii ramenního kloubu"
+            loading="lazy"
+            className="w-full aspect-[4/3] object-cover"
+          />
+          <div className="p-8">
+            <h3 className="text-2xl font-bold mb-1">Mgr. Simona Krylová</h3>
+            <p className="text-primary font-medium mb-6">Fyzioterapeutka</p>
 
-          <h4 className="text-base font-semibold mb-2">Vzdělání</h4>
-          <ul className="space-y-2 text-muted-foreground mb-5 text-sm">
-            <li className="flex items-start gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-              SZŠ a VZŠ Ostrava – Diplomovaný fyzioterapeut (2020)
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-              Ostravská univerzita, Zdravotně sociální fakulta – Léčebná rehabilitace a fyzioterapie (2003)
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-              Masarykova univerzita Brno, Lékařská fakulta – Léčebná rehabilitace a fyzioterapie (2005)
-            </li>
-          </ul>
-
-          <h4 className="text-base font-semibold mb-2">Praxe</h4>
-          <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
-            Lázně Velké Losiny, Fyzioterapie Šumperk s.r.o.
-          </p>
-
-          <h4 className="text-base font-semibold mb-2">Odborné kurzy</h4>
-          <ul className="space-y-1.5 text-muted-foreground text-sm">
-            {KRYLOVA_COURSES.map((c) => (
-              <li key={c} className="flex items-start gap-2">
+            <h4 className="text-base font-semibold mb-2">Vzdělání</h4>
+            <ul className="space-y-2 text-muted-foreground mb-5 text-sm">
+              <li className="flex items-start gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                {c}
+                SZŠ a VZŠ Ostrava – Diplomovaný fyzioterapeut (2020)
               </li>
-            ))}
-          </ul>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                Ostravská univerzita, Zdravotně sociální fakulta – Léčebná rehabilitace a fyzioterapie (2003)
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                Masarykova univerzita Brno, Lékařská fakulta – Léčebná rehabilitace a fyzioterapie (2005)
+              </li>
+            </ul>
+
+            <h4 className="text-base font-semibold mb-2">Praxe</h4>
+            <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
+              Lázně Velké Losiny, Fyzioterapie Šumperk s.r.o.
+            </p>
+
+            <h4 className="text-base font-semibold mb-2">Odborné kurzy</h4>
+            <ul className="space-y-1.5 text-muted-foreground text-sm mb-6">
+              {KRYLOVA_COURSES.map((c) => (
+                <li key={c} className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                  {c}
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="text-base font-semibold mb-3">Z mé praxe</h4>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+              {KRYLOVA_GALLERY.map((img, i) => (
+                <Dialog key={i}>
+                  <DialogTrigger asChild>
+                    <button
+                      type="button"
+                      className="block overflow-hidden rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    >
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        className="w-full aspect-square object-cover transition-transform hover:scale-105"
+                      />
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl p-0 bg-transparent border-0 shadow-none">
+                    <DialogTitle className="sr-only">{img.alt}</DialogTitle>
+                    <img src={img.src} alt={img.alt} className="w-full h-auto rounded-lg" />
+                  </DialogContent>
+                </Dialog>
+              ))}
+            </div>
+          </div>
         </article>
       </div>
     </div>
