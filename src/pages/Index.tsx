@@ -31,9 +31,9 @@ const KRYLOVA_GALLERY = [
 ];
 
 const MORAVKOVA_GALLERY = [
-  { src: moravkova1, alt: "Nácvik vzporu klečmo a stabilizace trupu" },
-  { src: moravkova2, alt: "Korekce protažení v hlubokém výpadu" },
-  { src: moravkova3, alt: "Aplikace kineziologického tejpu na lýtko" },
+  { src: moravkova1, alt: "Aplikace kineziologického tejpu na bérec" },
+  { src: moravkova2, alt: "Protažení v pokleku – mobilizace kyčle" },
+  { src: moravkova3, alt: "Protažení zad ve vysokém výpadu" },
 ];
 
 const PLICKOVA_GALLERY = [
