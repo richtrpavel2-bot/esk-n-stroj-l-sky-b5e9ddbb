@@ -20,9 +20,9 @@ import krylova1 from "@/assets/krylova/S_lezicim_muzem.jpeg";
 import krylova2 from "@/assets/krylova/S_muzem_pred_zrcadlem.jpeg";
 import krylova3 from "@/assets/krylova/Se_stojicim_muzem.jpeg";
 import moravkovaBanner from "@/assets/moravkova/uvodni_foto.jpeg";
-import moravkova1 from "@/assets/moravkova/IMG_5031.jpeg";
-import moravkova2 from "@/assets/moravkova/IMG_5039.jpeg";
-import moravkova3 from "@/assets/moravkova/IMG_5119.jpeg";
+import moravkova1 from "@/assets/moravkova/Protahuji_nohu.jpeg";
+import moravkova2 from "@/assets/moravkova/Protahuji_v_trojuhelniku.jpeg";
+import moravkova3 from "@/assets/moravkova/Protahuji_zada.jpeg";
 
 const KRYLOVA_GALLERY = [
   { src: krylova1, alt: "Terapie zad rázovou vlnou" },
