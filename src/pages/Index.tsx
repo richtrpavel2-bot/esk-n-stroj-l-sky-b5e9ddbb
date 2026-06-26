@@ -19,11 +19,21 @@ import krylovaBanner from "@/assets/krylova/Se_sedicim_muzem.jpeg";
 import krylova1 from "@/assets/krylova/S_lezicim_muzem.jpeg";
 import krylova2 from "@/assets/krylova/S_muzem_pred_zrcadlem.jpeg";
 import krylova3 from "@/assets/krylova/Se_stojicim_muzem.jpeg";
+import moravkovaBanner from "@/assets/moravkova/uvodni_foto.jpeg";
+import moravkova1 from "@/assets/moravkova/IMG_5031.jpeg";
+import moravkova2 from "@/assets/moravkova/IMG_5039.jpeg";
+import moravkova3 from "@/assets/moravkova/IMG_5119.jpeg";
 
 const KRYLOVA_GALLERY = [
   { src: krylova1, alt: "Terapie zad rázovou vlnou" },
   { src: krylova2, alt: "Cvičení stability na gymnastickém míči před zrcadlem" },
   { src: krylova3, alt: "Nácvik stoje a držení těla s therabandem" },
+];
+
+const MORAVKOVA_GALLERY = [
+  { src: moravkova1, alt: "Nácvik vzporu klečmo a stabilizace trupu" },
+  { src: moravkova2, alt: "Korekce protažení v hlubokém výpadu" },
+  { src: moravkova3, alt: "Aplikace kineziologického tejpu na lýtko" },
 ];
 
 const PLICKOVA_GALLERY = [
@@ -104,6 +114,7 @@ const MORAVKOVA_COURSES = [
   "Tradiční čínská medicína a fytoterapie",
   "Baňkování a moxování",
   "Reflexní terapie",
+  "Bachovy esence",
 ];
 
 const KRYLOVA_COURSES = [
@@ -371,41 +382,74 @@ const ColleagueProfiles = () => (
 
 
         {/* Morávková */}
-        <article className="bg-card border rounded-2xl p-8 shadow-sm">
-          <h3 className="text-2xl font-bold mb-1">Mgr. Michaela Morávková</h3>
-          <p className="text-primary font-medium mb-6">Fyzioterapeutka</p>
+        <article className="bg-card border rounded-2xl shadow-sm overflow-hidden">
+          <img
+            src={moravkovaBanner}
+            alt="Michaela Morávková při terapii – vzpor klečmo"
+            loading="lazy"
+            className="w-full aspect-[4/3] object-cover"
+          />
+          <div className="p-8">
+            <h3 className="text-2xl font-bold mb-1">Mgr. Michaela Morávková</h3>
+            <p className="text-primary font-medium mb-6">Fyzioterapeutka</p>
 
-          <h4 className="text-base font-semibold mb-2">Vzdělání</h4>
-          <ul className="space-y-2 text-muted-foreground mb-5 text-sm">
-            <li className="flex items-start gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-              Univerzita Palackého v Olomouci, Fakulta zdravotnických věd – Fyzioterapie (Bc.)
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-              Trenčianska univerzita A. Dubčeka, Fakulta zdravotníctva – Fyzioterapie (Mgr.)
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-              Tradiční čínská medicína v Brně
-            </li>
-          </ul>
-
-          <h4 className="text-base font-semibold mb-2">Praxe</h4>
-          <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
-            Remedic rehabilitace s.r.o., Lázně Velké Losiny s.r.o., Ungerová – rehabilitace s.r.o.,
-            Fyzioterapie Šumperk s.r.o.
-          </p>
-
-          <h4 className="text-base font-semibold mb-2">Odborné kurzy</h4>
-          <ul className="space-y-1.5 text-muted-foreground text-sm">
-            {MORAVKOVA_COURSES.map((c) => (
-              <li key={c} className="flex items-start gap-2">
+            <h4 className="text-base font-semibold mb-2">Vzdělání</h4>
+            <ul className="space-y-2 text-muted-foreground mb-5 text-sm">
+              <li className="flex items-start gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                {c}
+                Univerzita Palackého v Olomouci, Fakulta zdravotnických věd – Fyzioterapie (Bc.)
               </li>
-            ))}
-          </ul>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                Trenčianska univerzita A. Dubčeka, Fakulta zdravotníctva – Fyzioterapie (Mgr.)
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                Tradiční čínská medicína v Brně
+              </li>
+            </ul>
+
+            <h4 className="text-base font-semibold mb-2">Praxe</h4>
+            <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
+              Remedic rehabilitace s.r.o., Lázně Velké Losiny s.r.o., Ungerová – rehabilitace s.r.o.,
+              Fyzioterapie Šumperk s.r.o.
+            </p>
+
+            <h4 className="text-base font-semibold mb-2">Odborné kurzy</h4>
+            <ul className="space-y-1.5 text-muted-foreground text-sm mb-6">
+              {MORAVKOVA_COURSES.map((c) => (
+                <li key={c} className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                  {c}
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="text-base font-semibold mb-3">Z mé praxe</h4>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+              {MORAVKOVA_GALLERY.map((img) => (
+                <Dialog key={img.src}>
+                  <DialogTrigger asChild>
+                    <button
+                      type="button"
+                      className="block overflow-hidden rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    >
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        className="w-full aspect-square object-cover transition-transform hover:scale-105"
+                      />
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl p-0 bg-transparent border-0 shadow-none">
+                    <DialogTitle className="sr-only">{img.alt}</DialogTitle>
+                    <img src={img.src} alt={img.alt} className="w-full h-auto rounded-lg" />
+                  </DialogContent>
+                </Dialog>
+              ))}
+            </div>
+          </div>
         </article>
 
         {/* Krylová */}
