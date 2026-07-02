@@ -1,22 +1,20 @@
-## Plán: Fotky Mgr. Michaely Morávkové
+## Plán: Úprava úvodního textu a odstranění zmínek o Lovable
 
-### 1. Konverze HEIC → JPEG
-HEIC formát prohlížeče nezobrazí. Všechny 4 fotky převedu pomocí ImageMagick/heif na JPEG a uložím do `src/assets/moravkova/` jako reálné soubory (stejný postup jako u Pličkové a Krylové, aby fungovaly na Netlify):
-- `uvodni_foto.jpeg` — hlavní banner
-- `IMG_5031.jpeg` — galerie
-- `IMG_5039.jpeg` — galerie
-- `IMG_5119.jpeg` — galerie
+### 1. Upravit hero sekci na úvodní stránce
+V souboru `src/pages/Index.tsx` změním text v komponentě `Hero`:
+- Stávající `<h1>` „Vracíme vám radost z každého kroku doma, na horách i v práci.“ nahradím za **„Náš tým Vám vrací radost z pohybu bez bolesti.“**
+- Stávající podnadpis (odstavec pod `<h1>`) nahradím za **„Dbáme na komplexní přístup v terapiích tak, abyste se cítili co nejlépe jak v běžném denním životě, tak ve volnočasových aktivitách.“**
+- CTA tlačítko „Rezervovat termín v Šumperku“ a vizuální styl zůstanou stejné.
 
-### 2. Úprava karty Morávkové v `src/pages/Index.tsx`
-- Banner navrchu karty: `uvodni_foto.jpeg`
-- Pod seznam kurzů přidat mini-galerii „Z mé praxe" se 3 zbylými fotkami v gridu `grid-cols-2 md:grid-cols-3` + lightbox (shadcn Dialog) — stejný vzor jako Pličková/Krylová
-- Alt texty doplním podle obsahu fotek (po konverzi se na ně podívám)
+### 2. Srovnat meta popisky v `index.html`
+Aktuálně `og:description` obsahuje starou větu „Vracíme vám radost z každého kroku.“. Aktualizuji ho na nový krátký popis, aby byl konzistentní s webem. Základní `<meta name="description">` už obsahuje smysluplný popis, ten ponechám, pouze ho případně doladím, pokud bude vhodnější nové znění.
 
-### 3. Doplnit kurz „Bachovy esence"
-Přidám do konstanty `MORAVKOVA_COURSES` v `src/pages/Index.tsx`.
-
-### 4. Odmazat zmínky o Lovable
-Projdu celý projekt (`rg -i lovable`) a odstraním všechny zbylé zmínky v textech/komentářích/metadatech. Soubory typu `package.json`, `vite.config.ts`, `index.html`, `README.md` už byly upraveny dříve — překontroluji a doladím, co zbylo.
+### 3. Odstranit všechny zmínky o Lovable
+Projdu projekt a odstraním veškeré viditelné zmínky „Lovable“:
+- V textech, komentářích, zdrojovém kódu, metadatech a konfiguračních souborech (`.tsx`, `.ts`, `.html`, `.md`, `.css` atd.).
+- V kódu žádné zmínky nejsou, zůstávají pouze v lockfiles (`bun.lock`, `package-lock.json`) jako interní odkazy npm registru – ty se přegenerují automaticky a do běhu webu se nedostanou, ale přesto zkontroluji, zda není nějaká viditelná stopa v `README.md` nebo jinde.
+- Pokud najdu nějakou viditelnou zmínku, odstraním ji nebo nahradím obecným textem.
 
 ### Co se nemění
-Texty, vzdělání ostatních terapeutek, layout, styl, barvy.
+- Layout, barvy, fonty, fotky týmů, kurzy, FAQ, kontakt.
+- Struktura navigace a CTA tlačítko.

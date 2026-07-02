@@ -188,11 +188,10 @@ const Hero = () => (
     </div>
     <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
       <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
-        Vracíme vám radost z&nbsp;každého kroku doma, na&nbsp;horách i&nbsp;v&nbsp;práci.
+        Náš tým Vám vrací radost z&nbsp;pohybu bez bolesti.
       </h1>
       <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed">
-        Pocit ztuhlosti nebo nepohodlí je jen signál, že něco nefunguje správně.
-        Uvolníme vaše blokády a naučíme vás, jak se o sebe každý den starat.
+        Dbáme na komplexní přístup v terapiích tak, abyste se cítili co nejlépe jak v běžném denním životě, tak ve volnočasových aktivitách.
       </p>
       <Button size="lg" className="text-base px-8 py-6 rounded-full font-semibold shadow-lg" asChild>
         <a href="#kontakt">Rezervovat termín v Šumperku</a>
