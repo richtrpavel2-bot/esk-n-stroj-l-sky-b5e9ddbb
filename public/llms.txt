@@ -1,0 +1,37 @@
+# Fyzioterapie Šumperk s.r.o.
+
+> Soukromé rehabilitační zařízení v Šumperku zaměřené na komplexní péči o pohybový aparát.
+
+## Kontakt a objednání
+- Adresa: M. R. Štefánika 3, 787 01 Šumperk (růžová budova ve dvoře polikliniky)
+- Nové pacienty objednáváme pouze osobně na recepci: pondělí–čtvrtek 7:00–13:00
+- Smluvní zdravotní pojišťovny: 111, 201, 205, 207, 211, 213
+
+## Tým
+- Mgr. Hana Hůlková
+- Lenka Pličková
+- Mgr. Michaela Morávková
+- Mgr. Simona Krylová
+
+## Léčebné metody
+- Individuální léčebná tělesná výchova
+- Mobilizace a měkké techniky
+- Kinesiotaping
+- Dynamická neuromuskulární stabilizace
+- Metoda Ludmily Mojžíšové
+- Senzomotorika
+- Spirální stabilizace SM systém
+- Cvičení na míčích
+- Metoda R. Brunkow
+- McKenzie – mechanická diagnostika a terapie
+- Vestibulární rehabilitace – terapie závratí
+- Dynamika myofasciálních řetězců
+- Elektroléčba, UZ, magnetoterapie
+- Vodoléčba – vířivá koupel HK a DK
+
+## Stránky webu
+- [Úvod](/#uvod)
+- [O nás](/#o-nas)
+- [Léčebné metody](/#sluzby)
+- [Časté dotazy](/#faq)
+- [Kontakt](/#kontakt)
